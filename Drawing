@@ -1,0 +1,51 @@
+import turtle as trtl
+import shapes
+import math
+
+# setting everything up
+
+limit = 20
+trtl.speed(0)
+rotate = 2
+circles = 0
+trtl.penup()
+trtl.pensize(1)
+
+# drawing the picture
+
+while (circles < limit):
+  trtl.color("red")
+  trtl.setheading(90-rotate)
+  trtl.begin_fill()
+  trtl.circle(20-circles)
+  trtl.end_fill()
+  trtl.forward(20-circles)
+  circles = circles + 1
+  rotate = rotate + 26
+  trtl.color("orange")
+  trtl.setheading(90-rotate)
+  trtl.begin_fill()
+  trtl.circle(20-circles)
+  trtl.end_fill()
+  trtl.forward(20-circles)
+  circles = circles + 1
+  rotate = rotate + 26
+  trtl.color("yellow")
+  trtl.setheading(90-rotate)
+  trtl.begin_fill()
+  trtl.circle(20-circles)
+  trtl.end_fill()
+  trtl.forward(20-circles)
+  circles = circles + 1
+  rotate = rotate + 26
+
+trtl.goto(-70,20)
+trtl.setheading(-90)
+trtl.pendown()
+trtl.color("black")
+trtl.circle(100,360,6)
+trtl.penup()
+
+
+wn = trtl.Screen()
+wn.mainloop()
